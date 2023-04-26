@@ -258,7 +258,8 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
             if (controllerUtilizatori.verifAut(email,parola))
             {
                 this.form.removePnl("pnleLearning");
-
+                int id=controllerUtilizatori.idByemail(email);
+                this.form.Controls.Add(new pnleLearning1918_Elev(this.form, id));
             }
             else
             {

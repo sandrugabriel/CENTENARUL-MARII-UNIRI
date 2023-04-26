@@ -62,7 +62,66 @@ namespace CENTENARUL_MARII_UNIRI.Controllers
 
         }
 
+        public int idByemail(string email)
+        {
+            for (int i = 0; i < utilizatorii.Count; i++)
+            {
 
+                if (utilizatorii[i].getemail() == email)
+                {
+                    return utilizatorii[i].getId();
+                }
+            }
+
+            return -1;
+
+
+        }
+
+        public string numeByid(int id)
+        {
+            for (int i = 0; i < utilizatorii.Count; i++)
+            {
+
+                if (utilizatorii[i].getId() == id)
+                {
+                    return utilizatorii[i].getName();
+                }
+            }
+
+            return null;
+
+
+        }
+
+        public string clasaByid(int id)
+        {
+            for (int i = 0; i < utilizatorii.Count; i++)
+            {
+
+                if (utilizatorii[i].getId() == id)
+                {
+                    return utilizatorii[i].getclasa();
+                }
+            }
+
+            return null;
+        }
+
+        public List<int> getidsByclasa(string clasa)
+        {
+            List<int> list = new List<int>();
+
+            for (int i = 0; i < utilizatorii.Count; i++)
+            {
+                if (utilizatorii[i].getclasa().Equals(clasa))
+                {
+                    list.Add(utilizatorii[i].getId());
+                }
+            }
+
+            return list;
+        }
 
 
     }

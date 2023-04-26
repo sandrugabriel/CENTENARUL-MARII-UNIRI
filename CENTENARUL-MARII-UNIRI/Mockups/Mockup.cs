@@ -16,5 +16,10 @@ namespace CENTENARUL_MARII_UNIRI.Mockups
         {
             InitializeComponent();
         }
+
+        private void lblTitlu2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace CENTENARUL_MARII_UNIRI
         {
             InitializeComponent();
 
-            this.Controls.Add(new pnleLearning(this));
+            this.Controls.Add(new pnleLearning1918_Elev(this,1));
 
         }
 
