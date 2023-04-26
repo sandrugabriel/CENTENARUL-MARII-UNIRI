@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ControllerEvaluari.cs" />
     <Compile Include="Controllers\ControllerUtilizatori.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -59,8 +61,12 @@
     <Compile Include="Mockups\Mockup.Designer.cs">
       <DependentUpon>Mockup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Evaluare.cs" />
     <Compile Include="Models\Utilizator.cs" />
     <Compile Include="Panel-uri\pnleLearning.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panel-uri\pnleLearning1918_Elev.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
