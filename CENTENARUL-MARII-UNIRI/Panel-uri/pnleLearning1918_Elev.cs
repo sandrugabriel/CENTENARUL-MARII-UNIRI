@@ -17,15 +17,13 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
         private int id;
 
         Label lblTitlu;
-        Label lblPunctaj;
+        public Label lblPunctaj;
         Button btnStart;
         Label lblNume;
         TabControl tabControl1;
         TabPage tabTeste;
         TabPage tabCaiet;
         TabPage tabGrafic;
-        Panel panel1;
-        Button btnRaspund;
         DataGridView dataGridView1;
         DataGridViewTextBoxColumn nota;
         DataGridViewTextBoxColumn data;
@@ -35,14 +33,16 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
         Series series;
         Series series2;
 
-
+        public int punctaj = 1;
         private List<Evaluare> listEvaluari;
         private List<int> listClasa;
         private List<int> listNote;
         private int media;
+        private List<Item> listItems;
 
         ControllerEvaluari controllerEvaluari;
         ControllerUtilizatori controllerUtilizatori;
+        ControllerItems controllerItems;
 
         public pnleLearning1918_Elev(Form1 form1, int id1)
         {
@@ -67,14 +67,14 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
             this.tabTeste = new System.Windows.Forms.TabPage();
             this.tabCaiet = new System.Windows.Forms.TabPage();
             this.tabGrafic = new System.Windows.Forms.TabPage();
-            this.btnRaspund = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listEvaluari = new List<Evaluare>();
             this.controllerEvaluari = new ControllerEvaluari();
             this.controllerUtilizatori = new ControllerUtilizatori();
+            controllerItems = new ControllerItems();
+            listItems = new List<Item>();
             this.listClasa = new List<int>();
             this.listNote = new List<int>();
             this.chart = new Chart();
@@ -110,9 +110,6 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
 
             // btnStart
             btnstart();
-
-            // btnRaspund
-            btnraspund();
 
             //chart
             createChart();
@@ -178,9 +175,11 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
         {
 
             // tabTeste
-            this.tabTeste.Controls.Add(this.btnRaspund);
             this.tabTeste.Controls.Add(this.btnStart);
             this.tabTeste.Controls.Add(this.lblPunctaj);
+            listItems = controllerItems.getItemi();
+            Item item = listItems[31];
+            this.tabTeste.Controls.Add(new pnlItem4(item,this));
             this.tabTeste.Location = new System.Drawing.Point(4, 33);
             this.tabTeste.Name = "tabTeste";
             this.tabTeste.Padding = new System.Windows.Forms.Padding(3);
@@ -259,7 +258,7 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
             this.lblPunctaj.Location = new System.Drawing.Point(269, 36);
             this.lblPunctaj.Name = "lblPunctaj";
             this.lblPunctaj.Size = new System.Drawing.Size(79, 27);
-            this.lblPunctaj.Text = "Punctaj = 1";
+            this.lblPunctaj.Text = "Punctaj = "+ punctaj;
 
         }
 
@@ -283,15 +282,6 @@ namespace CENTENARUL_MARII_UNIRI.Panel_uri
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(124, 42);
             this.btnStart.Text = "Start";
-        }
-
-        private void btnraspund()
-        {
-            this.btnRaspund.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRaspund.Location = new System.Drawing.Point(950, 446);
-            this.btnRaspund.Name = "btnRaspund";
-            this.btnRaspund.Size = new System.Drawing.Size(124, 42);
-            this.btnRaspund.Text = "Raspund";
         }
 
 

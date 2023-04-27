@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControllerEvaluari.cs" />
+    <Compile Include="Controllers\ControllerItems.cs" />
     <Compile Include="Controllers\ControllerUtilizatori.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -62,11 +63,24 @@
       <DependentUpon>Mockup.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Evaluare.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Utilizator.cs" />
     <Compile Include="Panel-uri\pnleLearning.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panel-uri\pnleLearning1918_Elev.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panel-uri\pnlItem1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panel-uri\pnlItem2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panel-uri\pnlItem3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panel-uri\pnlItem4.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />

@@ -36,15 +36,18 @@
             this.lblDes = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabTeste = new System.Windows.Forms.TabPage();
-            this.tabCaiet = new System.Windows.Forms.TabPage();
-            this.tabGrafic = new System.Windows.Forms.TabPage();
+            this.pnlItems = new System.Windows.Forms.Panel();
             this.btnRaspund = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEnunt = new System.Windows.Forms.RichTextBox();
+            this.tabCaiet = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabGrafic = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabTeste.SuspendLayout();
+            this.pnlItems.SuspendLayout();
             this.tabCaiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -123,8 +126,7 @@
             // 
             // tabTeste
             // 
-            this.tabTeste.Controls.Add(this.panel1);
-            this.tabTeste.Controls.Add(this.btnRaspund);
+            this.tabTeste.Controls.Add(this.pnlItems);
             this.tabTeste.Controls.Add(this.btnStart);
             this.tabTeste.Controls.Add(this.lblPunctaj);
             this.tabTeste.Location = new System.Drawing.Point(4, 33);
@@ -134,6 +136,44 @@
             this.tabTeste.TabIndex = 0;
             this.tabTeste.Text = "Teste";
             this.tabTeste.UseVisualStyleBackColor = true;
+            // 
+            // pnlItems
+            // 
+            this.pnlItems.Controls.Add(this.btnRaspund);
+            this.pnlItems.Controls.Add(this.label1);
+            this.pnlItems.Controls.Add(this.txtEnunt);
+            this.pnlItems.Location = new System.Drawing.Point(48, 93);
+            this.pnlItems.Name = "pnlItems";
+            this.pnlItems.Size = new System.Drawing.Size(941, 395);
+            this.pnlItems.TabIndex = 9;
+            // 
+            // btnRaspund
+            // 
+            this.btnRaspund.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaspund.Location = new System.Drawing.Point(791, 338);
+            this.btnRaspund.Name = "btnRaspund";
+            this.btnRaspund.Size = new System.Drawing.Size(124, 42);
+            this.btnRaspund.TabIndex = 8;
+            this.btnRaspund.Text = "Raspund";
+            this.btnRaspund.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(83, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Enunt:";
+            // 
+            // txtEnunt
+            // 
+            this.txtEnunt.Location = new System.Drawing.Point(272, 52);
+            this.txtEnunt.Name = "txtEnunt";
+            this.txtEnunt.Size = new System.Drawing.Size(454, 126);
+            this.txtEnunt.TabIndex = 0;
+            this.txtEnunt.Text = "";
             // 
             // tabCaiet
             // 
@@ -145,32 +185,6 @@
             this.tabCaiet.TabIndex = 1;
             this.tabCaiet.Text = "Caiet de note";
             this.tabCaiet.UseVisualStyleBackColor = true;
-            // 
-            // tabGrafic
-            // 
-            this.tabGrafic.Location = new System.Drawing.Point(4, 33);
-            this.tabGrafic.Name = "tabGrafic";
-            this.tabGrafic.Size = new System.Drawing.Size(1172, 506);
-            this.tabGrafic.TabIndex = 2;
-            this.tabGrafic.Text = "Grafic";
-            this.tabGrafic.UseVisualStyleBackColor = true;
-            // 
-            // btnRaspund
-            // 
-            this.btnRaspund.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRaspund.Location = new System.Drawing.Point(1031, 446);
-            this.btnRaspund.Name = "btnRaspund";
-            this.btnRaspund.Size = new System.Drawing.Size(124, 42);
-            this.btnRaspund.TabIndex = 8;
-            this.btnRaspund.Text = "Raspund";
-            this.btnRaspund.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(48, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(941, 380);
-            this.panel1.TabIndex = 9;
             // 
             // dataGridView1
             // 
@@ -201,6 +215,15 @@
             this.data.ReadOnly = true;
             this.data.Width = 350;
             // 
+            // tabGrafic
+            // 
+            this.tabGrafic.Location = new System.Drawing.Point(4, 33);
+            this.tabGrafic.Name = "tabGrafic";
+            this.tabGrafic.Size = new System.Drawing.Size(1172, 506);
+            this.tabGrafic.TabIndex = 2;
+            this.tabGrafic.Text = "Grafic";
+            this.tabGrafic.UseVisualStyleBackColor = true;
+            // 
             // Mockup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,6 +239,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabTeste.ResumeLayout(false);
             this.tabTeste.PerformLayout();
+            this.pnlItems.ResumeLayout(false);
+            this.pnlItems.PerformLayout();
             this.tabCaiet.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -235,10 +260,12 @@
         private System.Windows.Forms.TabPage tabTeste;
         private System.Windows.Forms.TabPage tabCaiet;
         private System.Windows.Forms.TabPage tabGrafic;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlItems;
         private System.Windows.Forms.Button btnRaspund;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nota;
         private System.Windows.Forms.DataGridViewTextBoxColumn data;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox txtEnunt;
     }
 }
